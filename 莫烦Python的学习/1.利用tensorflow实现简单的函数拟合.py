@@ -22,7 +22,7 @@ init = tf.initialize_all_variables()
 sess = tf.Session()
 sess.run(init)
 
-for step in range(201):
+for step in range(401):
     sess.run(train)
     if step % 20 == 0:
         print(step, ' ', sess.run(Weigths), sess.run(biases))
