@@ -43,7 +43,7 @@ if __name__ == '__main__':
     ax = fig.add_subplot(1, 1, 1)
     ax.scatter(x_data, y_data)
     plt.ion()
-    plt.show()
+    plt.show() # 在老版本的python上使用的是plt.show(block=False), 但是在新版的python我们使用的一般是plt.ion()
 
     for i in range(100000):
         sess.run(train_step, feed_dict={xs: x_data, ys: y_data})
